@@ -33,5 +33,6 @@ python download.py lecture video
 ## How to Anti-Anti-Spider
 * Use PHANTOMJS to render pages
 * Forge User-Agent
+* Configure proxy IP
 * There is a random time interval between accessing two pages
 * Random access to some unrelated pages
