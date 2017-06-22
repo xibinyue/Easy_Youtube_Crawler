@@ -29,3 +29,9 @@ python download.py SVM
 python download.py lecture video
 </code></pre>
 <br>
+
+## How to Anti-Anti-Spider
+* Use PHANTOMJS to render pages
+* Forge User-Agent
+* There is a random time interval between accessing two pages
+* Random access to some unrelated pages
