@@ -2,15 +2,16 @@ import sys
 import os
 from pytube import YouTube
 
+
 def main(query):
     if not os.path.exists(query):
         os.makedirs(query)
 
-    file_links = open('video_links_%s.txt'%query, "a+")
+    file_links = open('video_links_%s.txt' % query, "a+")
     file_links.seek(0)
     links = [item for item in file_links.read().split('\n') if item != '']
 
-    file_dl_links = open('downloaded_links_%s.txt'%query, "a+")
+    file_dl_links = open('downloaded_links_%s.txt' % query, "a+")
     file_dl_links.seek(0)
     dl_links = [item for item in file_dl_links.read().split('\n') if item != '']
 
@@ -32,10 +33,11 @@ def main(query):
         except Exception as e:
             print(e)
 
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('Please give some words as a query')
     else:
-        query = '+'.join( sys.argv[1::] )
+        query = '+'.join(sys.argv[1::])
         print('query is %s\n' % query)
         main(query)
